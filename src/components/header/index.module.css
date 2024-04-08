@@ -1,0 +1,14 @@
+.header {
+    padding: 40px 15px 50px;
+    margin: o auto;
+    display: flex;
+    background: linear-gradient(92.7deg, #4cb8c4 0%, #3cd3ad 100%), #232323;
+}
+.header__title {
+    margin-bottom: 20px;
+    color: white;
+    font-weight: 700;
+    font-size: 44px;
+    line-height: 52px;
+    text-align: center;
+}
