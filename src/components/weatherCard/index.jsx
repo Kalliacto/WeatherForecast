@@ -1,23 +1,40 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import s from './index.module.css';
+import DetailedСard from '../detailedСard/index';
 import cn from 'classnames';
-import img from '../../assets/img/sun.png';
+import MiniCard from '../miniCard';
 
-const WeatherCard = () => {
+const WeatherCard = ({ weather }) => {
+    const [currentDay, setCurrentDay] = useState({});
+
+    useEffect(() => {
+        if (weather?.location) {
+            setCurrentDay(weather.forecast.forecastday[0]);
+        }
+    }, [weather]);
+
     return (
-        <div className={s.card}>
-            <div className={cn('container', s.card__wrap)}>
-                <h3 className={s.card__city}>Card city</h3>
-                <div className={s.card__details}>
-                    <p className={s.card__details_temp}>
-                        11&nbsp;<sup>&#176;c</sup>
-                    </p>
-                    <img src={img} className={s.card__details_img}></img>
-                    <p className={s.card__details_info}>Oblachno</p>
-                </div>
-            </div>
-        </div>
+        // TODO: При первом запуске и в случае неверного города или его отсутствия
+        <>
+            {weather?.location && (
+                <>
+                    <div className={s.card}>
+                        <div className={cn('container', s.card__wrap)}>
+                            <DetailedСard weather={currentDay} city={weather.location.name} />
+                            <ul className={s.cards__list}>
+                                {weather.forecast.forecastday.map((el) => (
+                                    <li key={el.date} onClick={() => setCurrentDay(el)}>
+                                        <MiniCard el={el} />
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    </div>
+                </>
+            )}
+        </>
     );
 };
+// {/* // TODO: Перевод текста */}
 
 export default WeatherCard;

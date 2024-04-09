@@ -1,12 +1,16 @@
+import { useState } from 'react';
 import './App.css';
 import Header from './components/header';
 import WeatherCard from './components/weatherCard';
 
 function App() {
+    const [city, setCity] = useState('');
+    const [weather, setWeather] = useState({});
+
     return (
         <div className='App'>
-            <Header />
-            <WeatherCard />
+            <Header city={city} setCity={setCity} setWeather={setWeather} />
+            <WeatherCard weather={weather} />
         </div>
     );
 }

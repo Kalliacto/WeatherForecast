@@ -3,6 +3,7 @@
     padding-top: 60px;
 }
 .card__wrap {
+    width: 580px;
     display: flex;
     background-color: #fff;
     border-radius: 6px;
@@ -25,26 +26,12 @@
     z-index: -1;
     border-radius: 6px;
 }
-.card__city {
-    font-weight: 500px;
-    font-size: 28px;
-    line-height: 33px;
-}
-.card__details {
+.cards__list {
+    width: 100%;
+    height: 200px;
+    border: 2px solid rebeccapurple;
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    gap: 10px;
 }
-.card__details_temp {
-    font-size: 92px;
-    line-height: 109px;
-    font-weight: 700;
-}
-.card__details_img {
-    height: 170px;
-}
-.card__details_info {
-    flex: 0 0 100%;
-    font-size: 20px;
-    line-height: 1.2;
-}
+
+/* // TODO: Сделать медиазапрос  на 630рх адаптив*/

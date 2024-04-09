@@ -1,0 +1,23 @@
+.card__city {
+    font-weight: 500px;
+    font-size: 28px;
+    line-height: 33px;
+}
+.card__details {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.card__details_temp {
+    font-size: 92px;
+    line-height: 109px;
+    font-weight: 700;
+}
+.card__details_img {
+    height: 170px;
+}
+.card__details_info {
+    flex: 0 0 100%;
+    font-size: 20px;
+    line-height: 1.2;
+}
