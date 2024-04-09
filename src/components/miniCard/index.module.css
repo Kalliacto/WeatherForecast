@@ -1,0 +1,25 @@
+.card {
+    background: linear-gradient(92.7deg, #4cb8c4 0%, #3cd3ad 100%), #232323;
+    padding: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-align: center;
+    flex: 1 1 0;
+    align-self: stretch;
+    display: grid;
+    grid-template-rows: 0.5fr 2fr 0.5fr 0.5fr;
+    justify-items: center;
+}
+.card:hover {
+    transform: scale(105%);
+}
+.card__text {
+    word-wrap: break-word;
+    /* max-width: 115px; */
+}
+.card__temp {
+    font-weight: 600;
+}
+.card__img {
+}

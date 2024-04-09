@@ -1,0 +1,12 @@
+.cards__list {
+    width: 100%;
+    max-height: max-content;
+    display: flex;
+    gap: 10px;
+    position: relative;
+    border-radius: 6px;
+    background: rgb(255, 255, 255, 0.5);
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}

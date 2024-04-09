@@ -2,7 +2,9 @@ const API_KEY = '1db42b67f5044db88df131321240804';
 
 export const getInfo = async (city) => {
     try {
-        const response = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${city}&days=5`);
+        const response = await fetch(
+            `http://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${city}&days=5&lang=ru`
+        );
         const data = await response.json();
 
         if (response.ok) {

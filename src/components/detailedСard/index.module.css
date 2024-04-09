@@ -5,7 +5,7 @@
 }
 .card__details {
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     flex-wrap: wrap;
 }
 .card__details_temp {

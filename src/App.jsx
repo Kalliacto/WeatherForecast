@@ -10,7 +10,7 @@ function App() {
     return (
         <div className='App'>
             <Header city={city} setCity={setCity} setWeather={setWeather} />
-            <WeatherCard weather={weather} />
+            <WeatherCard weather={weather} searchCity={city} />
         </div>
     );
 }
