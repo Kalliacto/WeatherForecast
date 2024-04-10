@@ -1,0 +1,3 @@
+Иконки взяты с сайта https://ru.freepik.com
+API погоды https://www.weatherapi.com/docs/
+Макет импровизация чистой воды в процессе написания

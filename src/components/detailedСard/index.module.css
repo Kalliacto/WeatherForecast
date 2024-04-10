@@ -1,23 +1,115 @@
+.card__wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
 .card__city {
     font-weight: 500px;
     font-size: 28px;
     line-height: 33px;
 }
-.card__details {
+.cards {
     display: flex;
-    /* justify-content: space-between; */
+}
+.card__details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     flex-wrap: wrap;
+    gap: 20px;
 }
 .card__details_temp {
     font-size: 92px;
     line-height: 109px;
     font-weight: 700;
+    height: 170px;
+    width: 170px;
 }
 .card__details_img {
     height: 170px;
+    width: 170px;
 }
 .card__details_info {
-    flex: 0 0 100%;
     font-size: 20px;
     line-height: 1.2;
+    max-width: 300px;
+    grid-column: 1 / 3;
+}
+
+.card__details_more {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex-grow: 1;
+}
+.astro {
+    display: flex;
+    font-size: 14px;
+    gap: 30px;
+}
+.astro_sun {
+    padding: 10px 40px 10px 0;
+    background-image: url('../../assets/img/sun.png');
+    background-repeat: no-repeat;
+    background-size: 15% auto;
+    background-position: right center;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+.astro_moon {
+    padding: 10px 40px 10px 0;
+    background-image: url('../../assets/img/moon.png');
+    background-repeat: no-repeat;
+    background-size: 15% auto;
+    background-position: right center;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+@media (max-width: 840px) {
+    .card__wrap {
+        display: flex;
+        flex-direction: column;
+        gap: 100px;
+    }
+    .cards {
+        display: flex;
+        flex-direction: column;
+    }
+    .card__details {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .card__details_img {
+        width: 100%;
+        height: auto;
+    }
+    .astro {
+        flex-direction: column;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 640px) {
+    .card__wrap {
+        gap: 20px;
+    }
+    .card__details_temp {
+        font-size: 52px;
+    }
+    .card__details {
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .card__details_img {
+        width: 50%;
+        height: auto;
+    }
+    .card__details_temp {
+        font-size: 92px;
+        height: auto;
+        width: auto;
+    }
 }

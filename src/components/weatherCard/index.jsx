@@ -37,6 +37,5 @@ const WeatherCard = ({ weather, searchCity }) => {
         </>
     );
 };
-// {/* // TODO: Перевод текста */}
 
 export default WeatherCard;
