@@ -7,6 +7,8 @@ function App() {
     const [city, setCity] = useState('');
     const [weather, setWeather] = useState({});
 
+    console.log(weather);
+
     return (
         <div className='App'>
             <Header city={city} setCity={setCity} setWeather={setWeather} />

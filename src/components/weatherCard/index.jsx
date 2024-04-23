@@ -3,6 +3,7 @@ import s from './index.module.css';
 import DetailedСard from '../detailedСard/index';
 import cn from 'classnames';
 import CardsList from '../cardsList';
+import HourlyInfo from '../hourlyInfo';
 
 const WeatherCard = ({ weather, searchCity }) => {
     const [currentDay, setCurrentDay] = useState({});
@@ -19,8 +20,6 @@ const WeatherCard = ({ weather, searchCity }) => {
         return;
     }, [weather]);
 
-    console.log(currentDay);
-
     return (
         // TODO: При первом запуске и в случае неверного города или его отсутствия
         <>
@@ -29,6 +28,7 @@ const WeatherCard = ({ weather, searchCity }) => {
                     <div className={s.card}>
                         <div className={cn('container', s.card__wrap)}>
                             <DetailedСard weather={currentDay} city={city} />
+                            {!!Object.keys(currentDay).length && <HourlyInfo weather={currentDay} />}
                             <CardsList weather={weather} setCurrentDay={setCurrentDay} />
                         </div>
                     </div>

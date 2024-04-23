@@ -1,0 +1,16 @@
+.chart__container {
+    background: var(--main-gradient);
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: var(--main-shadow);
+}
+.chart {
+    width: 100%;
+    height: 500px;
+}
+@media (max-width: 840px) {
+    .chart__container {
+        grid-column: 1 / 3;
+        grid-row: 3 / 4;
+    }
+}

@@ -69,3 +69,15 @@ fieldset {
     padding: 0 70px;
     margin: 0 auto;
 }
+
+@media (max-width: 840px) {
+    .container {
+        padding: 0 50px;
+    }
+}
+
+@media (max-width: 640px) {
+    .container {
+        padding: 0 10px;
+    }
+}
