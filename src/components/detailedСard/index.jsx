@@ -8,7 +8,7 @@ const DetailedСard = ({ weather, city }) => {
                 <h3 className={s.card__city}>{city}</h3>
                 <div className={s.card__details}>
                     <p className={s.card__details_temp}>
-                        {Math.round(weather.day?.avgtemp_c)}&nbsp;<sup>&#176;c</sup>
+                        {Math.round(weather.day?.avgtemp_c)}&nbsp;<sup>℃</sup>
                     </p>
                     <img
                         src={`//cdn.weatherapi.com/weather/128x128/${weather.day?.condition?.icon.slice(

@@ -46,6 +46,7 @@
     flex-direction: column;
     gap: 10px;
     flex-grow: 1;
+    justify-content: flex-end;
 }
 .astro {
     display: flex;
@@ -86,8 +87,8 @@
     .card__details {
         display: flex;
         flex-direction: column;
-        margin-left: 0;
-        margin-top: 0;
+        margin-left: auto;
+        margin-top: auto;
     }
 
     .card__details_img {
@@ -97,6 +98,9 @@
     .astro {
         flex-direction: column;
         margin-top: 20px;
+    }
+    .card__details_info {
+        flex-grow: 1;
     }
 }
 
@@ -111,7 +115,7 @@
     .card__details {
         flex-wrap: wrap;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: center;
     }
     .card__details_img {
         width: 50%;
@@ -121,5 +125,10 @@
         font-size: 92px;
         height: auto;
         width: auto;
+    }
+
+    .card__details_more p {
+        border-bottom: 1px gainsboro solid;
+        margin-right: 30px;
     }
 }
